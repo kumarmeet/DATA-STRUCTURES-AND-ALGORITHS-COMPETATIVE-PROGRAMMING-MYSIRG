@@ -79,3 +79,62 @@ void search(struct node * list1, struct node * list2)
         printf("%d",1);
     else
         printf("%d",-1);
+}
+
+/*
+second method
+int flag = 1, temp;
+    struct node *l1, *l2, *i1 = NULL, *i2 = NULL;
+
+    l1 = list1;
+    l2 = list2;
+
+    while(l1)
+    {
+        i1 = l1->next;
+        i2 = l2->next;
+
+        while(i1)
+        {
+            if(l1->d > i1->d)
+            {
+                temp = l1->d;
+                l1->d = i1->d;
+                i1->d = temp;
+            }
+            i1 = i1->next;
+        }
+
+        while(i2)
+        {
+            if(l2->d > i2->d)
+            {
+                temp = l2->d;
+                l2->d = i2->d;
+                i2->d = temp;
+            }
+            i2 = i2->next;
+        }
+
+        l2 = l2->next;
+        l1 = l1->next;
+    }
+
+    while(list1)
+    {
+        if(list1->d == list2->d)
+            flag = 1;
+        else if(list1->d != list2->d)
+        {
+            flag = 0;
+            break;
+        }
+        list1 = list1->next;
+        list2 = list2->next;
+    }
+
+    if(flag)
+        printf("%d",1);
+    else
+        printf("%d",-1);
+*/
