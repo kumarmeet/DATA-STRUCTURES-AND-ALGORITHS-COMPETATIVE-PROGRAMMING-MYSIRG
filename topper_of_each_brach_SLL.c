@@ -52,7 +52,7 @@ struct node* find_max(struct node *list)
 {
     struct node *temp, *t;
 
-    temp = list;
+    temp = t = list;
 
     while(temp)
     {
