@@ -22,7 +22,7 @@ int main()
         {
             interval = interval / 2;
 
-            for(l = 0; l < interval; l++)
+            for(l = interval; l > 0; l--)
                 if(arr[l] == search)
                 {
                     flag = l;
