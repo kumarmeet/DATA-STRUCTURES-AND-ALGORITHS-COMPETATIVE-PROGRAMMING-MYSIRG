@@ -22,7 +22,7 @@ int main()
         j++;
     }
 
-    int extract[20] = {0};
+    int extract[size];
     int temp, r;
     j = 0;
     int m = 0;
